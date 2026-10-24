@@ -57,21 +57,25 @@ Toàn bộ mã nguồn dự án được tổ chức theo chuẩn Mô-đun hóa 
 
 ```text
 IMDb_Review_Lab/
-├── data/                  # Dữ liệu local (đã cấu hình chặn đẩy lên Git theo .gitignore)
-│   └── raw/               # Chứa file IMDB Dataset.csv gốc
-├── outputs/               # Sản phẩm xuất ra tự động từ hệ thống
+├── data/                  # Dữ liệu local (được ẩn theo .gitignore)
+│   └── raw/               # Chứa file IMDB Dataset.csv
+├── notebooks/             # Phân tích EDA & Thử nghiệm Jupyter Notebooks
+├── outputs/               # Kết quả xuất ra từ hệ thống
 │   ├── figures/           # Biểu đồ so sánh hiệu năng (.png)
 │   └── reports/           # File CSV tổng hợp kết quả đánh giá (.csv)
 ├── src/                   # Mã nguồn cốt lõi (Core Python Modules)
-│   ├── __init__.py        # Đánh dấu thư mục Python Package
-│   ├── dataset.py         # Đọc CSV dự phòng Regex & Chia tập Train/Test phân tầng
-│   ├── preprocess.py      # Làm sạch văn bản, xử lý phủ định & Vector hóa TF-IDF
-│   ├── models.py          # Lớp NB-SVM, XGBoost, Stacking & Baseline Models
-│   ├── evaluate.py        # Hàm tính 5 thước đo đánh giá & Vẽ ma trận biểu đồ
-│   └── utils.py           # Tiện ích xuất file CSV & Lưu trữ đối tượng
-├── main.py                # Điểm điều khiển trung tâm (Main Entrypoint)
-├── requirements.txt       # Danh sách thư viện cần thiết với phiên bản ổn định
-└── README.md              # Báo cáo tổng quan chi tiết dự án
+│   ├── __init__.py        # Đánh dấu Python Package
+│   ├── dataset.py         # Nạp & Chia tập dữ liệu Train/Test
+│   ├── preprocess.py      # Làm sạch & Trích xuất TF-IDF
+│   ├── models.py          # Lớp NB-SVM, XGBoost, Stacking & Baselines
+│   ├── evaluate.py        # Hàm tính thước đo & Vẽ biểu đồ
+│   └── utils.py           # Tiện ích xuất file CSV & Lưu trữ
+├── .gitignore             # Bỏ qua tệp dữ liệu nặng (.csv) và tệp rác
+├── index.html             # Giao diện Web / Dashboard hiển thị báo cáo
+├── main.py                # File điều khiển luồng chính (Main Entrypoint)
+├── nbsvm_model.json       # File cấu hình / Trọng số mô hình NB-SVM
+├── requirements.txt       # Danh sách thư viện phụ thuộc
+└── README.md              # Báo cáo tổng quan dự án
 ```
 
 ###  🧹 Quy trình Tiền xử lý NLP (Text Pipeline)
