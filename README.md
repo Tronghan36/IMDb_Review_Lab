@@ -1,5 +1,5 @@
 # 🎬 IMDb Review Lab: Hệ Thống Phân Tích Cảm Xúc Đánh Giá Phim
-> **IMDb Review Sentiment Analysis System** — Đồ án Môn Học Máy / Xử lý Ngôn ngữ Tự nhiên (NLP)  
+> **IMDb Review Sentiment Analysis System** — Báo cáo Môn Học Máy / Xử lý Ngôn ngữ Tự nhiên (NLP)  
 > 📌 **GitHub Repository:** [Tronghan36/IMDb_Review_Lab](https://github.com/Tronghan36/IMDb_Review_Lab)
 
 ---
